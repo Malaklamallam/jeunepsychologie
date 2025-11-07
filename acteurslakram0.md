@@ -1,8 +1,6 @@
-```mermaid
-
+``` mermaid
 %% Diagramme de classes – Accès aux soins psychologiques pour les jeunes (93)
 classDiagram
-direction TB
 
 class Youth {
   UUID id
@@ -158,5 +156,4 @@ PsychologicalProgram ..> HealthProfessional
 ARS_IDF ..> MedicoSocialStructure
 LocalAuthority ..> LocalAssociation
 Youth ..> PsychologicalProgram
-
 ```
