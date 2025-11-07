@@ -1,6 +1,4 @@
-<img width="2842" height="3362" alt="mermaid" src="https://github.com/user-attachments/assets/551ea684-8c89-4bb9-a1e1-4f3b4c88a769" />
-
-
+```mermaid
 classDiagram
 %% --- Acteurs principaux ---
 class ARS_IDF {
@@ -89,4 +87,4 @@ PTSM93 --> CapitalisationSante : partage résultats
 CapitalisationSante --> ARS_IDF : diffuse retours d’expérience
 Famille --> PJSM : demande accompagnement
 Jeune --> CMP : sollicite un suivi
-
+```
