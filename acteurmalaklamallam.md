@@ -1,90 +1,61 @@
 ```mermaid
 classDiagram
-%% --- Acteurs principaux ---
-class ARS_IDF {
-  +String nom = "Agence Régionale de Santé Île-de-France"
-  +coordonnerPolitiqueSante()
-  +financerStructures()
-}
-
-class Departement93 {
-  +String nom = "Département de la Seine-Saint-Denis"
-  +soutenirDispositifsLocaux()
-  +coordonnerActeurs()
-}
-
-class CMP {
+class Acteur {
   +String nom
-  +String localisation
-  +int nb_psychologues
-  +suiviPsychologique(Jeune)
-  +orientation(Jeune)
+  +String type
+  +collaborer()
 }
 
-class PJSM {
-  +String nom = "Plateforme Jeunesse Santé Mentale"
-  +accompagnement(Jeune)
-  +orientation(Famille)
+class ActeurPublic {
+  +String domaine
+  +coordonner()
 }
 
 class Association {
-  +String nom
-  +String domaine
-  +prevention(Jeune)
-  +soutien(Famille)
-}
-
-class EducationNationale {
-  +String nom = "Éducation nationale"
-  +signalement(Jeune)
-  +preventionEcoles()
-}
-
-class Jeune {
-  +String nom
-  +int age
-  +String situation
-  +demandeAide()
-  +participerSuivi()
+  +String domaineAction
+  +accompagnerJeune()
 }
 
 class Famille {
-  +String nom
-  +String lienJeune
-  +demandeInformation()
+  +int nbEnfants
   +soutenirJeune()
 }
 
-class ODDS93 {
-  +String nom = "Observatoire Départemental des Données Sociales"
+class Jeune {
+  +int age
+  +String situation
+  +demanderAide()
+}
+
+class InstitutionSanitaire {
+  +String service
+  +orienterJeune()
+}
+
+class InstitutionEducative {
+  +String niveau
+  +signalerJeune()
+}
+
+class CollectiviteTerritoriale {
+  +String region
+  +financerProjet()
+}
+
+class Observatoire {
+  +String domaineEtude
   +collecterDonnees()
-  +analyserDonnees()
 }
 
-class PTSM93 {
-  +String nom = "Projet Territorial de Santé Mentale 93"
-  +partagerDonnees()
-  +evaluerStructures()
-}
+%% --- Héritages ---
+Acteur <|-- ActeurPublic
+Acteur <|-- Association
+Acteur <|-- Famille
+Acteur <|-- Jeune
 
-class CapitalisationSante {
-  +String nom = "Capitalisation Santé"
-  +diffuserPratiquesInnovantes()
-}
+ActeurPublic <|-- InstitutionSanitaire
+ActeurPublic <|-- InstitutionEducative
+ActeurPublic <|-- CollectiviteTerritoriale
+ActeurPublic <|-- Observatoire
 
-%% --- Relations ---
-ARS_IDF --> Departement93 : planifie et finance
-Departement93 --> CMP : coordonne
-Departement93 --> PJSM : soutient
-CMP --> Jeune : assure le suivi psychologique
-PJSM --> Jeune : oriente et accompagne
-Association --> Jeune : propose écoute et prévention
-Association --> Famille : offre soutien
-EducationNationale --> PJSM : collabore pour la prévention
-EducationNationale --> CMP : signale jeunes en difficulté
-ODDS93 --> PTSM93 : transmet données
-PTSM93 --> CapitalisationSante : partage résultats
-CapitalisationSante --> ARS_IDF : diffuse retours d’expérience
-Famille --> PJSM : demande accompagnement
-Jeune --> CMP : sollicite un suivi
 ```
