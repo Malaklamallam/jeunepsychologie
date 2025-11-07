@@ -1,4 +1,4 @@
-%% Diagramme de classes – Accès aux soins psy (93)
+```mermaid
 classDiagram
 direction TB
 
@@ -156,3 +156,4 @@ DispositifPsy ..> ProfessionnelSante : *finance séances*
 ARS_IDF ..> StructureMedicoSociale : *finance/coordonne*
 CollectiviteLocale ..> AssociationLocale : *subventionne*
 Jeune ..> DispositifPsy : *éligibilité*
+```
