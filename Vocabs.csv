@@ -1,46 +1,119 @@
-Colonne1,Colonne2
-Class,Links
-modsci,https://w3id.org/skgo/modsci#Psychology
-acm,
-wlo,http://purl.org/ontology/wo/AnimalIntelligence
-coreo,http://purl.org/coreo#Attitude
-km4c,http://www.disit.org/km4city/schema#Psychologists
-cwrc,http://sparql.cwrc.ca/ontologies/cwrc#Persona
-rsctx,http://softeng.polito.it/rsctx#MentalState
-biotop,http://purl.org/biotop/biotop.owl#MentalFunction
-tb,https://w3id.org/timebank#MentalDisorder
-being,http://contextus.net/ontology/ontomedia/ext/common/being#Mental-Illness
-vair,https://w3id.org/vair#Health
-sbeo,https://w3id.org/sbeo#MentalAbility
-gdprt,https://w3id.org/GDPRtEXT#HealthData
-s4ehaw,https://saref.etsi.org/saref4ehaw/HealthActuator
-m3lite,http://purl.org/iot/vocab/m3-lite#Health
-obo,http://purl.obolibrary.org/obo/OBI_0000207
-iottaxolite,http://purl.org/iot/vocab/iot-taxonomy-lite#Health
-schema,http://schema.org/HealthAndBeautyBusiness
-gold,http://purl.org/linguistics/gold/DeponentMiddleVoice
-,
-,
-,
-,
-Colonne1,Colonne2
-Property,Links
-dul,http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#expresses
-semiotics,http://www.ontologydesignpatterns.org/cp/owl/semiotics.owl#expresses
-being,http://contextus.net/ontology/ontomedia/ext/common/being#has-mental-disorder
-rsctx,http://softeng.polito.it/rsctx#hasMentalState
-era,http://data.europa.eu/949/healthSafetyAndEnvironmentDataParameter
-demlab,http://www.demcare.eu/ontologies/demlab.owl#hasMMSEScore
-s4ehaw,https://saref.etsi.org/saref4ehaw/lastName
-provoc,http://ns.inria.fr/provoc#healthImpact
-ludo-gm,http://ns.inria.fr/ludo/v1/gamemodel#hasObjectVitality
-pimsii,http://www.molmod.info/semantics/pims-ii.ttl#isGoalOf
-sulo,https://w3id.org/sulo/hasPart
-dbpedia-owl,
-hosp,
-gcon,https://w3id.org/GConsent#hasAssociation
-rico,https://www.ica.org/standards/RiC/ontology#hasFamilyAssociationWith
-dsd,https://w3id.org/dsd#hasAssociationMember
-dpv,https://w3id.org/dpv#hasProcessing
-gvp,http://vocab.getty.edu/ontology#ulan1322_school_was
-frbrer,http://iflastandards.info/ns/fr/frbr/frbrer/P3029
+subject,predicate,object
+https://psychologie.org/onto/jeunepsychologie#,rdf:type,owl:Ontology
+https://psychologie.org/onto/jeunepsychologie#,dcterms:title,Accès aux soins psychologiques pour les jeunes
+https://psychologie.org/onto/jeunepsychologie#Acteur,rdf:type,rdfs:Class
+https://psychologie.org/onto/jeunepsychologie#Acteur,rdfs:label,Acteur
+https://psychologie.org/onto/jeunepsychologie#Acteur,rdfs:domain,o:Resource
+https://psychologie.org/onto/jeunepsychologie#Acteur,vs:term_status,experimental
+https://psychologie.org/onto/jeunepsychologie#Jeune,rdf:type,rdfs:Class
+https://psychologie.org/onto/jeunepsychologie#Jeune,rdfs:label,Jeune
+https://psychologie.org/onto/jeunepsychologie#Jeune,rdfs:domain,o:Resource
+https://psychologie.org/onto/jeunepsychologie#Jeune,vs:term_status,experimental
+https://psychologie.org/onto/jeunepsychologie#Famille,rdf:type,rdfs:Class
+https://psychologie.org/onto/jeunepsychologie#Famille,rdfs:label,Famille
+https://psychologie.org/onto/jeunepsychologie#Famille,rdfs:domain,o:Resource
+https://psychologie.org/onto/jeunepsychologie#Famille,vs:term_status,experimental
+https://psychologie.org/onto/jeunepsychologie#Association,rdf:type,rdfs:Class
+https://psychologie.org/onto/jeunepsychologie#Association,rdfs:label,Association
+https://psychologie.org/onto/jeunepsychologie#Association,rdfs:domain,o:Resource
+https://psychologie.org/onto/jeunepsychologie#Association,vs:term_status,experimental
+https://psychologie.org/onto/jeunepsychologie#ActeurPublic,rdf:type,rdfs:Class
+https://psychologie.org/onto/jeunepsychologie#ActeurPublic,rdfs:label,Acteur public
+https://psychologie.org/onto/jeunepsychologie#ActeurPublic,rdfs:domain,o:Resource
+https://psychologie.org/onto/jeunepsychologie#ActeurPublic,vs:term_status,experimental
+https://psychologie.org/onto/jeunepsychologie#Ecole,rdf:type,rdfs:Class
+https://psychologie.org/onto/jeunepsychologie#Ecole,rdfs:label,École
+https://psychologie.org/onto/jeunepsychologie#Ecole,rdfs:domain,o:Resource
+https://psychologie.org/onto/jeunepsychologie#Ecole,vs:term_status,experimental
+https://psychologie.org/onto/jeunepsychologie#EtablissementScolaire,rdf:type,rdfs:Class
+https://psychologie.org/onto/jeunepsychologie#EtablissementScolaire,rdfs:label,Établissement scolaire
+https://psychologie.org/onto/jeunepsychologie#EtablissementScolaire,rdfs:domain,o:Resource
+https://psychologie.org/onto/jeunepsychologie#EtablissementScolaire,vs:term_status,experimental
+https://psychologie.org/onto/jeunepsychologie#Hopital,rdf:type,rdfs:Class
+https://psychologie.org/onto/jeunepsychologie#Hopital,rdfs:label,Hôpital
+https://psychologie.org/onto/jeunepsychologie#Hopital,rdfs:domain,o:Resource
+https://psychologie.org/onto/jeunepsychologie#Hopital,vs:term_status,experimental
+https://psychologie.org/onto/jeunepsychologie#Medecin,rdf:type,rdfs:Class
+https://psychologie.org/onto/jeunepsychologie#Medecin,rdfs:label,Médecin
+https://psychologie.org/onto/jeunepsychologie#Medecin,rdfs:domain,o:Resource
+https://psychologie.org/onto/jeunepsychologie#Medecin,vs:term_status,experimental
+https://psychologie.org/onto/jeunepsychologie#Psychologue,rdf:type,rdfs:Class
+https://psychologie.org/onto/jeunepsychologie#Psychologue,rdfs:label,Psychologue
+https://psychologie.org/onto/jeunepsychologie#Psychologue,rdfs:domain,o:Resource
+https://psychologie.org/onto/jeunepsychologie#Psychologue,vs:term_status,experimental
+https://psychologie.org/onto/jeunepsychologie#Psychiatre,rdf:type,rdfs:Class
+https://psychologie.org/onto/jeunepsychologie#Psychiatre,rdfs:label,Psychiatre
+https://psychologie.org/onto/jeunepsychologie#Psychiatre,rdfs:domain,o:Resource
+https://psychologie.org/onto/jeunepsychologie#Psychiatre,vs:term_status,experimental
+https://psychologie.org/onto/jeunepsychologie#StructureMedicoSociale,rdf:type,rdfs:Class
+https://psychologie.org/onto/jeunepsychologie#StructureMedicoSociale,rdfs:label,Structure médico-sociale
+https://psychologie.org/onto/jeunepsychologie#StructureMedicoSociale,rdfs:domain,o:Resource
+https://psychologie.org/onto/jeunepsychologie#StructureMedicoSociale,vs:term_status,experimental
+https://psychologie.org/onto/jeunepsychologie#CentreSante,rdf:type,rdfs:Class
+https://psychologie.org/onto/jeunepsychologie#CentreSante,rdfs:label,Centre de santé
+https://psychologie.org/onto/jeunepsychologie#CentreSante,rdfs:domain,o:Resource
+https://psychologie.org/onto/jeunepsychologie#CentreSante,vs:term_status,experimental
+https://psychologie.org/onto/jeunepsychologie#CollectiviteTerritoriale,rdf:type,rdfs:Class
+https://psychologie.org/onto/jeunepsychologie#CollectiviteTerritoriale,rdfs:label,Collectivité territoriale
+https://psychologie.org/onto/jeunepsychologie#CollectiviteTerritoriale,rdfs:domain,o:Resource
+https://psychologie.org/onto/jeunepsychologie#CollectiviteTerritoriale,vs:term_status,experimental
+https://psychologie.org/onto/jeunepsychologie#Observatoire,rdf:type,rdfs:Class
+https://psychologie.org/onto/jeunepsychologie#Observatoire,rdfs:label,Observatoire
+https://psychologie.org/onto/jeunepsychologie#Observatoire,rdfs:domain,o:Resource
+https://psychologie.org/onto/jeunepsychologie#Observatoire,vs:term_status,experimental
+https://psychologie.org/onto/jeunepsychologie#collaborer,rdf:type,rdf:Property
+https://psychologie.org/onto/jeunepsychologie#collaborer,rdfs:label,collaborer
+https://psychologie.org/onto/jeunepsychologie#collaborer,rdfs:domain,https://psychologie.org/onto/jeunepsychologie#Acteur
+https://psychologie.org/onto/jeunepsychologie#collaborer,vs:term_status,experimental
+https://psychologie.org/onto/jeunepsychologie#demanderAide,rdf:type,rdf:Property
+https://psychologie.org/onto/jeunepsychologie#demanderAide,rdfs:label,demander de l'aide
+https://psychologie.org/onto/jeunepsychologie#demanderAide,rdfs:domain,https://psychologie.org/onto/jeunepsychologie#Jeune
+https://psychologie.org/onto/jeunepsychologie#demanderAide,vs:term_status,experimental
+https://psychologie.org/onto/jeunepsychologie#soutenirJeune,rdf:type,rdf:Property
+https://psychologie.org/onto/jeunepsychologie#soutenirJeune,rdfs:label,soutenir un jeune
+https://psychologie.org/onto/jeunepsychologie#soutenirJeune,rdfs:domain,https://psychologie.org/onto/jeunepsychologie#Famille
+https://psychologie.org/onto/jeunepsychologie#soutenirJeune,vs:term_status,experimental
+https://psychologie.org/onto/jeunepsychologie#accompagnerJeune,rdf:type,rdf:Property
+https://psychologie.org/onto/jeunepsychologie#accompagnerJeune,rdfs:label,accompagner un jeune
+https://psychologie.org/onto/jeunepsychologie#accompagnerJeune,rdfs:domain,https://psychologie.org/onto/jeunepsychologie#Association
+https://psychologie.org/onto/jeunepsychologie#accompagnerJeune,vs:term_status,experimental
+https://psychologie.org/onto/jeunepsychologie#coordonner,rdf:type,rdf:Property
+https://psychologie.org/onto/jeunepsychologie#coordonner,rdfs:label,coordonner
+https://psychologie.org/onto/jeunepsychologie#coordonner,rdfs:domain,https://psychologie.org/onto/jeunepsychologie#ActeurPublic
+https://psychologie.org/onto/jeunepsychologie#coordonner,vs:term_status,experimental
+https://psychologie.org/onto/jeunepsychologie#signalerJeune,rdf:type,rdf:Property
+https://psychologie.org/onto/jeunepsychologie#signalerJeune,rdfs:label,signaler un jeune
+https://psychologie.org/onto/jeunepsychologie#signalerJeune,rdfs:domain,https://psychologie.org/onto/jeunepsychologie#Ecole
+https://psychologie.org/onto/jeunepsychologie#signalerJeune,vs:term_status,experimental
+https://psychologie.org/onto/jeunepsychologie#repererJeune,rdf:type,rdf:Property
+https://psychologie.org/onto/jeunepsychologie#repererJeune,rdfs:label,repérer un jeune
+https://psychologie.org/onto/jeunepsychologie#repererJeune,rdfs:domain,https://psychologie.org/onto/jeunepsychologie#EtablissementScolaire
+https://psychologie.org/onto/jeunepsychologie#repererJeune,vs:term_status,experimental
+https://psychologie.org/onto/jeunepsychologie#admettreJeune,rdf:type,rdf:Property
+https://psychologie.org/onto/jeunepsychologie#admettreJeune,rdfs:label,admettre un jeune
+https://psychologie.org/onto/jeunepsychologie#admettreJeune,rdfs:domain,https://psychologie.org/onto/jeunepsychologie#Hopital
+https://psychologie.org/onto/jeunepsychologie#admettreJeune,vs:term_status,experimental
+https://psychologie.org/onto/jeunepsychologie#evaluerJeune,rdf:type,rdf:Property
+https://psychologie.org/onto/jeunepsychologie#evaluerJeune,rdfs:label,évaluer un jeune
+https://psychologie.org/onto/jeunepsychologie#evaluerJeune,rdfs:domain,https://psychologie.org/onto/jeunepsychologie#Medecin
+https://psychologie.org/onto/jeunepsychologie#evaluerJeune,vs:term_status,experimental
+https://psychologie.org/onto/jeunepsychologie#consulterJeune,rdf:type,rdf:Property
+https://psychologie.org/onto/jeunepsychologie#consulterJeune,rdfs:label,consulter un jeune
+https://psychologie.org/onto/jeunepsychologie#consulterJeune,rdfs:domain,https://psychologie.org/onto/jeunepsychologie#Psychologue
+https://psychologie.org/onto/jeunepsychologie#consulterJeune,vs:term_status,experimental
+https://psychologie.org/onto/jeunepsychologie#soignerJeune,rdf:type,rdf:Property
+https://psychologie.org/onto/jeunepsychologie#soignerJeune,rdfs:label,soigner un jeune
+https://psychologie.org/onto/jeunepsychologie#soignerJeune,rdfs:domain,https://psychologie.org/onto/jeunepsychologie#Psychiatre
+https://psychologie.org/onto/jeunepsychologie#soignerJeune,vs:term_status,experimental
+https://psychologie.org/onto/jeunepsychologie#coordonnerParcours,rdf:type,rdf:Property
+https://psychologie.org/onto/jeunepsychologie#coordonnerParcours,rdfs:label,coordonner le parcours
+https://psychologie.org/onto/jeunepsychologie#coordonnerParcours,rdfs:domain,https://psychologie.org/onto/jeunepsychologie#StructureMedicoSociale
+https://psychologie.org/onto/jeunepsychologie#coordonnerParcours,vs:term_status,experimental
+https://psychologie.org/onto/jeunepsychologie#financerProjet,rdf:type,rdf:Property
+https://psychologie.org/onto/jeunepsychologie#financerProjet,rdfs:label,financer un projet
+https://psychologie.org/onto/jeunepsychologie#financerProjet,rdfs:domain,https://psychologie.org/onto/jeunepsychologie#CollectiviteTerritoriale
+https://psychologie.org/onto/jeunepsychologie#financerProjet,vs:term_status,experimental
+https://psychologie.org/onto/jeunepsychologie#accueillirJeune,rdf:type,rdf:Property
+https://psychologie.org/onto/jeunepsychologie#accueillirJeune,rdfs:label,accueillir un jeune
+https://psychologie.org/onto/jeunepsychologie#accueillirJeune,rdfs:domain,https://psychologie.org/onto/jeunepsychologie#CentreSante
+https://psychologie.org/onto/jeunepsychologie#accueillirJeune,vs:term_status,experimental
