@@ -1,16 +1,60 @@
-resource_template,title,property:apjsd:collaborer,property:apjsd:demanderAide,property:apjsd:soutenirJeune,property:apjsd:accompagnerJeune,property:apjsd:coordonner,property:apjsd:signalerJeune,property:apjsd:repererJeune,property:apjsd:admettreJeune,property:apjsd:evaluerJeune,property:apjsd:consulterJeune,property:apjsd:soignerJeune,property:apjsd:coordonnerParcours,property:apjsd:accueillirJeune,property:apjsd:financerProjet,property:apjsd:collecterDonnees
-Acteur,Acteur exemple,Oui,,,,,,,,,,,,,
-Jeune,Jean Dupont,,Besoin de soutien psychologique,,,,,,,,,,,,
-Famille,Famille Martin,,,,Soutenir un jeune,,,,,,,,,
-Association,Association A,,,,,Accompagner un jeune,,,,,,,,
-ActeurPublic,Service Public,,,,,Coordonner,,,,,,,,
-Ecole,École Saint-Denis,,,,,,Signaler un jeune,,,,,,,
-EtablissementScolaire,Lycée Saint-Denis,,,,,,,Repérer un jeune,,,,,,
-Hopital,Hôpital Saint-Denis,,,,,,,,Admettre un jeune,,,,,
-Medecin,Dr. Dupont,,,,,,,,,Évaluer un jeune,,,,,
-Psychologue,Dr. Martin,,,,,,,,,,Consulter un jeune,,,,
-Psychiatre,Dr. Durand,,,,,,,,,,,Soigner un jeune,,,
-StructureMedicoSociale,Structure A,,,,,,,,,,,,Coordonner le parcours,,
-CentreSante,Centre de Santé Saint-Denis,,,,,,,,,,,,,Accueillir un jeune,,
-CollectiviteTerritoriale,Collectivité Saint-Denis,,,,,,,,,,,,,,Financer un projet,
-Observatoire,Observatoire Local,,,,,,,,,,,,,,,Collecter des données
+subject,predicate,object
+https://psychologie.org/onto/jeunepsychologie#,http://purl.org/dc/terms/title,Accès aux soins psychologiques pour les jeunes
+https://psychologie.org/onto/jeunepsychologie#Acteur,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.w3.org/2000/01/rdf-schema#Class
+https://psychologie.org/onto/jeunepsychologie#Acteur,http://www.w3.org/2000/01/rdf-schema#label,Acteur
+https://psychologie.org/onto/jeunepsychologie#ActeurPublic,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.w3.org/2000/01/rdf-schema#Class
+https://psychologie.org/onto/jeunepsychologie#ActeurPublic,http://www.w3.org/2000/01/rdf-schema#label,Acteur public
+https://psychologie.org/onto/jeunepsychologie#Jeune,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.w3.org/2000/01/rdf-schema#Class
+https://psychologie.org/onto/jeunepsychologie#Jeune,http://www.w3.org/2000/01/rdf-schema#label,Jeune
+https://psychologie.org/onto/jeunepsychologie#Famille,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.w3.org/2000/01/rdf-schema#Class
+https://psychologie.org/onto/jeunepsychologie#Famille,http://www.w3.org/2000/01/rdf-schema#label,Famille
+https://psychologie.org/onto/jeunepsychologie#Association,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.w3.org/2000/01/rdf-schema#Class
+https://psychologie.org/onto/jeunepsychologie#Association,http://www.w3.org/2000/01/rdf-schema#label,Association
+https://psychologie.org/onto/jeunepsychologie#Ecole,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.w3.org/2000/01/rdf-schema#Class
+https://psychologie.org/onto/jeunepsychologie#Ecole,http://www.w3.org/2000/01/rdf-schema#label,École
+https://psychologie.org/onto/jeunepsychologie#EtablissementScolaire,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.w3.org/2000/01/rdf-schema#Class
+https://psychologie.org/onto/jeunepsychologie#EtablissementScolaire,http://www.w3.org/2000/01/rdf-schema#label,Établissement scolaire
+https://psychologie.org/onto/jeunepsychologie#Hopital,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.w3.org/2000/01/rdf-schema#Class
+https://psychologie.org/onto/jeunepsychologie#Hopital,http://www.w3.org/2000/01/rdf-schema#label,Hôpital
+https://psychologie.org/onto/jeunepsychologie#Medecin,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.w3.org/2000/01/rdf-schema#Class
+https://psychologie.org/onto/jeunepsychologie#Medecin,http://www.w3.org/2000/01/rdf-schema#label,Médecin
+https://psychologie.org/onto/jeunepsychologie#Psychologue,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.w3.org/2000/01/rdf-schema#Class
+https://psychologie.org/onto/jeunepsychologie#Psychologue,http://www.w3.org/2000/01/rdf-schema#label,Psychologue
+https://psychologie.org/onto/jeunepsychologie#Psychiatre,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.w3.org/2000/01/rdf-schema#Class
+https://psychologie.org/onto/jeunepsychologie#Psychiatre,http://www.w3.org/2000/01/rdf-schema#label,Psychiatre
+https://psychologie.org/onto/jeunepsychologie#StructureMedicoSociale,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.w3.org/2000/01/rdf-schema#Class
+https://psychologie.org/onto/jeunepsychologie#StructureMedicoSociale,http://www.w3.org/2000/01/rdf-schema#label,Structure médico-sociale
+https://psychologie.org/onto/jeunepsychologie#CentreSante,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.w3.org/2000/01/rdf-schema#Class
+https://psychologie.org/onto/jeunepsychologie#CentreSante,http://www.w3.org/2000/01/rdf-schema#label,Centre de santé
+https://psychologie.org/onto/jeunepsychologie#CollectiviteTerritoriale,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.w3.org/2000/01/rdf-schema#Class
+https://psychologie.org/onto/jeunepsychologie#CollectiviteTerritoriale,http://www.w3.org/2000/01/rdf-schema#label,Collectivité territoriale
+https://psychologie.org/onto/jeunepsychologie#Observatoire,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.w3.org/2000/01/rdf-schema#Class
+https://psychologie.org/onto/jeunepsychologie#Observatoire,http://www.w3.org/2000/01/rdf-schema#label,Observatoire
+https://psychologie.org/onto/jeunepsychologie#collaborer,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+https://psychologie.org/onto/jeunepsychologie#collaborer,http://www.w3.org/2000/01/rdf-schema#label,collaborer
+https://psychologie.org/onto/jeunepsychologie#demanderAide,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+https://psychologie.org/onto/jeunepsychologie#demanderAide,http://www.w3.org/2000/01/rdf-schema#label,demander de l'aide
+https://psychologie.org/onto/jeunepsychologie#soutenirJeune,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+https://psychologie.org/onto/jeunepsychologie#soutenirJeune,http://www.w3.org/2000/01/rdf-schema#label,soutenir un jeune
+https://psychologie.org/onto/jeunepsychologie#accompagnerJeune,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+https://psychologie.org/onto/jeunepsychologie#accompagnerJeune,http://www.w3.org/2000/01/rdf-schema#label,accompagner un jeune
+https://psychologie.org/onto/jeunepsychologie#signalerJeune,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+https://psychologie.org/onto/jeunepsychologie#signalerJeune,http://www.w3.org/2000/01/rdf-schema#label,signaler un jeune
+https://psychologie.org/onto/jeunepsychologie#repererJeune,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+https://psychologie.org/onto/jeunepsychologie#repererJeune,http://www.w3.org/2000/01/rdf-schema#label,repérer un jeune
+https://psychologie.org/onto/jeunepsychologie#admettreJeune,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+https://psychologie.org/onto/jeunepsychologie#admettreJeune,http://www.w3.org/2000/01/rdf-schema#label,admettre un jeune
+https://psychologie.org/onto/jeunepsychologie#evaluerJeune,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+https://psychologie.org/onto/jeunepsychologie#evaluerJeune,http://www.w3.org/2000/01/rdf-schema#label,évaluer un jeune
+https://psychologie.org/onto/jeunepsychologie#consulterJeune,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+https://psychologie.org/onto/jeunepsychologie#consulterJeune,http://www.w3.org/2000/01/rdf-schema#label,consulter un jeune
+https://psychologie.org/onto/jeunepsychologie#soignerJeune,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+https://psychologie.org/onto/jeunepsychologie#soignerJeune,http://www.w3.org/2000/01/rdf-schema#label,soigner un jeune
+https://psychologie.org/onto/jeunepsychologie#coordonner,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+https://psychologie.org/onto/jeunepsychologie#coordonner,http://www.w3.org/2000/01/rdf-schema#label,coordonner
+https://psychologie.org/onto/jeunepsychologie#coordonnerParcours,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+https://psychologie.org/onto/jeunepsychologie#coordonnerParcours,http://www.w3.org/2000/01/rdf-schema#label,coordonner le parcours
+https://psychologie.org/onto/jeunepsychologie#accueillirJeune,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+https://psychologie.org/onto/jeunepsychologie#accueillirJeune,http://www.w3.org/2000/01/rdf-schema#label,accueillir un jeune
+https://psychologie.org/onto/jeunepsychologie#financerProjet,http://www.w3.org/1999/02/22-rdf-syntax-ns#type,http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+https://psychologie.org/onto/jeunepsychologie#financerProjet,http://www.w3.org/2000/01/rdf-schema#label,financer un projet
