@@ -1,0 +1,16 @@
+Prefix,Concept,Label,Description
+apjsd,Acteur,Acteur,Entité intervenant dans le suivi ou l’accompagnement des jeunes.
+apjsd,Jeune,Jeune,Un jeune concerné par l'accès aux soins psychologiques.
+apjsd,Famille,Famille,Famille accompagnant ou soutenant le jeune.
+apjsd,Association,Association,Association locale intervenant auprès des jeunes.
+apjsd,ActeurPublic,Acteur public,Institution publique impliquée dans le suivi et la coordination.
+apjsd,Ecole,École,Établissement scolaire accueillant et signalant les jeunes.
+apjsd,EtablissementScolaire,Établissement scolaire,Établissement scolaire pouvant repérer et orienter le jeune.
+apjsd,Hopital,Hôpital,Hôpital ou service de santé accueillant ou hospitalisant le jeune.
+apjsd,Medecin,Médecin,Médecin généraliste ou spécialiste en charge de l’évaluation du jeune.
+apjsd,Psychologue,Psychologue,Professionnel de santé mentale pour le suivi du jeune.
+apjsd,Psychiatre,Psychiatre,Médecin psychiatre capable de soigner et suivre le jeune.
+apjsd,StructureMedicoSociale,Structure médico-sociale,Structure coordonnant le parcours du jeune et fournissant un suivi.
+apjsd,CentreSante,Centre de santé,Centre de santé accueillant le jeune dans une zone spécifique.
+apjsd,CollectiviteTerritoriale,Collectivité territoriale,Collectivité locale finançant ou soutenant des projets pour les jeunes.
+apjsd,Observatoire,Observatoire,Observatoire collectant des données sur les jeunes et les dispositifs.
