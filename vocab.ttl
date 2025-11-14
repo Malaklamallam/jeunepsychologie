@@ -1,0 +1,86 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix o: <http://omeka.org/s/vocabs/o#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix apjsd: <https://psychologie.org/onto/jeunepsychologie#> .
+
+<https://psychologie.org/onto/jeunepsychologie#> a owl:Ontology ;
+    dcterms:title "Accès aux soins psychologiques pour les jeunes" .
+
+apjsd:Acteur a rdfs:Class ; 
+    rdfs:label "Acteur" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+apjsd:Jeune a rdfs:Class ;
+    rdfs:label "Jeune" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+apjsd:Famille a rdfs:Class ;
+    rdfs:label "Famille" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+apjsd:Association a rdfs:Class ;
+    rdfs:label "Association" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+apjsd:ActeurPublic a rdfs:Class ;
+    rdfs:label "Acteur public" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+apjsd:Ecole a rdfs:Class ;
+    rdfs:label "École" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+apjsd:EtablissementScolaire a rdfs:Class ;
+    rdfs:label "Établissement scolaire" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+apjsd:Hopital a rdfs:Class ;
+    rdfs:label "Hôpital" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+apjsd:Medecin a rdfs:Class ;
+    rdfs:label "Médecin" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+apjsd:Psychologue a rdfs:Class ;
+    rdfs:label "Psychologue" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+apjsd:Psychiatre a rdfs:Class ;
+    rdfs:label "Psychiatre" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+apjsd:StructureMedicoSociale a rdfs:Class ;
+    rdfs:label "Structure médico-sociale" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+apjsd:CentreSante a rdfs:Class ;
+    rdfs:label "Centre de santé" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+apjsd:CollectiviteTerritoriale a rdfs:Class ;
+    rdfs:label "Collectivité territoriale" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+apjsd:Observatoire a rdfs:Class ;
+    rdfs:label "Observatoire" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
