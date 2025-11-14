@@ -84,3 +84,79 @@ apjsd:Observatoire a rdfs:Class ;
     rdfs:label "Observatoire" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
+
+apjsd:collaborer a rdf:Property ;
+    rdfs:label "collaborer" ;
+    rdfs:domain apjsd:Acteur ;
+    vs:term_status "experimental" .
+
+apjsd:demanderAide a rdf:Property ;
+    rdfs:label "demander de l'aide" ;
+    rdfs:domain apjsd:Jeune ;
+    vs:term_status "experimental" .
+
+apjsd:soutenirJeune a rdf:Property ;
+    rdfs:label "soutenir un jeune" ;
+    rdfs:domain apjsd:Famille ;
+    vs:term_status "experimental" .
+
+apjsd:accompagnerJeune a rdf:Property ;
+    rdfs:label "accompagner un jeune" ;
+    rdfs:domain apjsd:Association ;
+    vs:term_status "experimental" .
+
+apjsd:coordonner a rdf:Property ;
+    rdfs:label "coordonner" ;
+    rdfs:domain apjsd:ActeurPublic ;
+    vs:term_status "experimental" .
+
+apjsd:signalerJeune a rdf:Property ;
+    rdfs:label "signaler un jeune" ;
+    rdfs:domain apjsd:Ecole ;
+    vs:term_status "experimental" .
+
+apjsd:repererJeune a rdf:Property ;
+    rdfs:label "repérer un jeune" ;
+    rdfs:domain apjsd:EtablissementScolaire ;
+    vs:term_status "experimental" .
+
+apjsd:admettreJeune a rdf:Property ;
+    rdfs:label "admettre un jeune" ;
+    rdfs:domain apjsd:Hopital ;
+    vs:term_status "experimental" .
+
+apjsd:evaluerJeune a rdf:Property ;
+    rdfs:label "évaluer un jeune" ;
+    rdfs:domain apjsd:Medecin ;
+    vs:term_status "experimental" .
+
+apjsd:consulterJeune a rdf:Property ;
+    rdfs:label "consulter un jeune" ;
+    rdfs:domain apjsd:Psychologue ;
+    vs:term_status "experimental" .
+
+apjsd:soignerJeune a rdf:Property ;
+    rdfs:label "soigner un jeune" ;
+    rdfs:domain apjsd:Psychiatre ;
+    vs:term_status "experimental" .
+
+apjsd:coordonnerParcours a rdf:Property ;
+    rdfs:label "coordonner le parcours" ;
+    rdfs:domain apjsd:StructureMedicoSociale ;
+    vs:term_status "experimental" .
+
+apjsd:accueillirJeune a rdf:Property ;
+    rdfs:label "accueillir un jeune" ;
+    rdfs:domain apjsd:CentreSante ;
+    vs:term_status "experimental" .
+
+apjsd:financerProjet a rdf:Property ;
+    rdfs:label "financer un projet" ;
+    rdfs:domain apjsd:CollectiviteTerritoriale ;
+    vs:term_status "experimental" .
+
+apjsd:collecterDonnees a rdf:Property ;
+    rdfs:label "collecter des données" ;
+    rdfs:domain apjsd:Observatoire ;
+    vs:term_status "experimental" .
+
