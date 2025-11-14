@@ -1,0 +1,16 @@
+resource_template,title,property:apjsd:collaborer,property:apjsd:demanderAide,property:apjsd:soutenirJeune,property:apjsd:accompagnerJeune,property:apjsd:coordonner,property:apjsd:signalerJeune,property:apjsd:repererJeune,property:apjsd:admettreJeune,property:apjsd:evaluerJeune,property:apjsd:consulterJeune,property:apjsd:soignerJeune,property:apjsd:coordonnerParcours,property:apjsd:accueillirJeune,property:apjsd:financerProjet,property:apjsd:collecterDonnees
+Acteur,Acteur exemple,Oui,,,,,,,,,,,,,
+Jeune,Jean Dupont,,Besoin de soutien psychologique,,,,,,,,,,,,
+Famille,Famille Martin,,,,Soutenir un jeune,,,,,,,,,
+Association,Association A,,,,,Accompagner un jeune,,,,,,,,
+ActeurPublic,Service Public,,,,,Coordonner,,,,,,,,
+Ecole,École Saint-Denis,,,,,,Signaler un jeune,,,,,,,
+EtablissementScolaire,Lycée Saint-Denis,,,,,,,Repérer un jeune,,,,,,
+Hopital,Hôpital Saint-Denis,,,,,,,,Admettre un jeune,,,,,
+Medecin,Dr. Dupont,,,,,,,,,Évaluer un jeune,,,,,
+Psychologue,Dr. Martin,,,,,,,,,,Consulter un jeune,,,,
+Psychiatre,Dr. Durand,,,,,,,,,,,Soigner un jeune,,,
+StructureMedicoSociale,Structure A,,,,,,,,,,,,Coordonner le parcours,,
+CentreSante,Centre de Santé Saint-Denis,,,,,,,,,,,,,Accueillir un jeune,,
+CollectiviteTerritoriale,Collectivité Saint-Denis,,,,,,,,,,,,,,Financer un projet,
+Observatoire,Observatoire Local,,,,,,,,,,,,,,,Collecter des données
