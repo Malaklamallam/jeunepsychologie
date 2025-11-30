@@ -1,0 +1,128 @@
+@prefix : <http://example.org/sante93#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix schema: <https://schema.org/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+
+
+<http://example.org/sante93> a owl:Ontology ;
+    dcterms:title "Ontologie Santé Psychologique Étudiants 93" ;
+    dcterms:creator "Projet JeunePsychologie – Seine-Saint-Denis" ;
+    dcterms:description "Vocabulaire RDF pour décrire l'accès aux soins psychologiques des étudiants du département 93. Inclut étudiants, psychologues, lieux, organisations et besoins psychologiques." ;
+    dcterms:created "2025-12-01" ;
+    dcterms:license "CC-BY 4.0" .
+
+
+
+:Etudiant a owl:Class ;
+    rdfs:label "Étudiant" ;
+    rdfs:comment "Un étudiant du département 93 pouvant avoir des besoins psychologiques." ;
+    rdfs:subClassOf foaf:Person .
+
+:Psy a owl:Class ;
+    rdfs:label "Psychologue" ;
+    rdfs:comment "Un psychologue ou professionnel de santé mentale." ;
+    rdfs:subClassOf foaf:Person .
+
+:LieuConsultation a owl:Class ;
+    rdfs:label "Lieu de consultation" ;
+    rdfs:comment "Lieu permettant les consultations psychologiques (cabinet, maison médicale, centre universitaire...)." ;
+    rdfs:subClassOf schema:Place .
+
+:Organisation a owl:Class ;
+    rdfs:label "Organisation" ;
+    rdfs:comment "Une université, association ou organisme impliqué dans l'accompagnement psychologique." ;
+    rdfs:subClassOf schema:Organization .
+
+:BesoinPsychologique a owl:Class ;
+    rdfs:label "Besoin psychologique" ;
+    rdfs:comment "Type de besoin ou problématique psychologique rencontrée par un étudiant." ;
+    rdfs:subClassOf schema:MedicalCondition .
+
+:Consultation a owl:Class ;
+    rdfs:label "Consultation psychologique" ;
+    rdfs:comment "Séance ou rendez-vous entre un étudiant et un psychologue." .
+
+
+
+:aBesoin a rdf:Property ;
+    rdfs:label "a besoin psychologique" ;
+    rdfs:comment "Lie un étudiant à un besoin psychologique." ;
+    rdfs:domain :Etudiant ;
+    rdfs:range :BesoinPsychologique .
+
+:aRDVavec a rdf:Property ;
+    rdfs:label "a rendez-vous avec" ;
+    rdfs:comment "Relation entre un étudiant et un psychologue." ;
+    rdfs:domain :Consultation ;
+    rdfs:range :Psy .
+
+:concerneEtudiant a rdf:Property ;
+    rdfs:label "concerne l'étudiant" ;
+    rdfs:domain :Consultation ;
+    rdfs:range :Etudiant .
+
+:situéDans a rdf:Property ;
+    rdfs:label "est situé dans" ;
+    rdfs:comment "Localisation du psychologue ou du lieu de consultation." ;
+    rdfs:domain :Psy ;
+    rdfs:range :LieuConsultation .
+
+:gerePar a rdf:Property ;
+    rdfs:label "géré par" ;
+    rdfs:comment "Indique l'organisation responsable du lieu de consultation." ;
+    rdfs:domain :LieuConsultation ;
+    rdfs:range :Organisation .
+
+:proposeService a rdf:Property ;
+    rdfs:label "propose un service psychologique" ;
+    rdfs:comment "Relation entre une organisation et les besoins psychologiques qu'elle peut prendre en charge." ;
+    rdfs:domain :Organisation ;
+    rdfs:range :BesoinPsychologique .
+
+
+
+:age a rdf:Property ;
+    rdfs:label "âge" ;
+    rdfs:comment "Âge de l'étudiant." ;
+    rdfs:domain :Etudiant ;
+    rdfs:range schema:Integer .
+
+:sexe a rdf:Property ;
+    rdfs:label "sexe" ;
+    rdfs:comment "Sexe de la personne." ;
+    rdfs:domain :Etudiant ;
+    rdfs:range schema:Text .
+
+:nomOrganisation a rdf:Property ;
+    rdfs:label "nom de l'organisation" ;
+    rdfs:domain :Organisation ;
+    rdfs:range schema:Text .
+
+:adresse a rdf:Property ;
+    rdfs:label "adresse" ;
+    rdfs:domain :LieuConsultation ;
+    rdfs:range schema:Text .
+
+:dateConsultation a rdf:Property ;
+    rdfs:label "date de la consultation" ;
+    rdfs:domain :Consultation ;
+    rdfs:range schema:Date .
+
+:duree a rdf:Property ;
+    rdfs:label "durée de la consultation" ;
+    rdfs:domain :Consultation ;
+    rdfs:range schema:Duration .
+
+:nomBesoin a rdf:Property ;
+    rdfs:label "nom du besoin psychologique" ;
+    rdfs:domain :BesoinPsychologique ;
+    rdfs:range schema:Text .
+
+:descriptionBesoin a rdf:Property ;
+    rdfs:label "description du besoin" ;
+    rdfs:domain :BesoinPsychologique ;
+    rdfs:range schema:Text .
