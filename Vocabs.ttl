@@ -8,6 +8,7 @@
 <https://ontology.sante-mentale-jeunes.org#> 
     a owl:Ontology ;
     dcterms:title "Ontologie : Santé mentale des jeunes" .
+            dcterms:creator "Lamallam Malak" .
 
 smj:Acteur a rdfs:Class ;
     rdfs:label "Acteur" ;
