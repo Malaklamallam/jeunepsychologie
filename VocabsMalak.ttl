@@ -1,0 +1,114 @@
+@prefix smj: <https://ontology.sante-mentale-jeunes.org#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+
+<https://ontology.sante-mentale-jeunes.org#> 
+    a owl:Ontology ;
+    dcterms:title "Ontologie : Santé mentale des jeunes" ;
+        dcterms:creator "Lamallam Malak" .
+
+smj:Acteur a rdfs:Class ;
+    rdfs:label "Acteur" ;
+    vs:term_status "experimental" .
+
+smj:ActeurPublic a rdfs:Class ;
+    rdfs:subClassOf smj:Acteur ;
+    rdfs:label "ActeurPublic" ;
+    vs:term_status "experimental" .
+
+smj:Association a rdfs:Class ;
+    rdfs:subClassOf smj:Acteur ;
+    rdfs:label "Association" ;
+    vs:term_status "experimental" .
+
+smj:Famille a rdfs:Class ;
+    rdfs:subClassOf smj:Acteur ;
+    rdfs:label "Famille" ;
+    vs:term_status "experimental" .
+
+smj:Jeune a rdfs:Class ;
+    rdfs:subClassOf smj:Acteur ;
+    rdfs:label "Jeune" ;
+    vs:term_status "experimental" .
+
+smj:InstitutionSanitaire a rdfs:Class ;
+    rdfs:subClassOf smj:ActeurPublic ;
+    rdfs:label "InstitutionSanitaire" ;
+    vs:term_status "experimental" .
+
+smj:InstitutionEducative a rdfs:Class ;
+    rdfs:subClassOf smj:ActeurPublic ;
+    rdfs:label "InstitutionEducative" ;
+    vs:term_status "experimental" .
+
+smj:CollectiviteTerritoriale a rdfs:Class ;
+    rdfs:subClassOf smj:ActeurPublic ;
+    rdfs:label "CollectiviteTerritoriale" ;
+    vs:term_status "experimental" .
+
+smj:Observatoire a rdfs:Class ;
+    rdfs:subClassOf smj:ActeurPublic ;
+    rdfs:label "Observatoire" ;
+    vs:term_status "experimental" .
+
+
+
+
+
+smj:nom a rdf:Property ;
+    rdfs:label "nom" ;
+    rdfs:domain smj:Acteur ;
+    rdfs:range rdfs:Literal .
+
+smj:type a rdf:Property ;
+    rdfs:label "type" ;
+    rdfs:domain smj:Acteur ;
+    rdfs:range rdfs:Literal .
+
+smj:domaine a rdf:Property ;
+    rdfs:label "domaine" ;
+    rdfs:domain smj:ActeurPublic ;
+    rdfs:range rdfs:Literal .
+
+smj:domaineAction a rdf:Property ;
+    rdfs:label "domaineAction" ;
+    rdfs:domain smj:Association ;
+    rdfs:range rdfs:Literal .
+
+smj:nbEnfants a rdf:Property ;
+    rdfs:label "nbEnfants" ;
+    rdfs:domain smj:Famille ;
+    rdfs:range rdfs:Literal .
+
+smj:age a rdf:Property ;
+    rdfs:label "age" ;
+    rdfs:domain smj:Jeune ;
+    rdfs:range rdfs:Literal .
+
+smj:situation a rdf:Property ;
+    rdfs:label "situation" ;
+    rdfs:domain smj:Jeune ;
+    rdfs:range rdfs:Literal .
+
+smj:service a rdf:Property ;
+    rdfs:label "service" ;
+    rdfs:domain smj:InstitutionSanitaire ;
+    rdfs:range rdfs:Literal .
+
+smj:niveau a rdf:Property ;
+    rdfs:label "niveau" ;
+    rdfs:domain smj:InstitutionEducative ;
+    rdfs:range rdfs:Literal .
+
+smj:region a rdf:Property ;
+    rdfs:label "region" ;
+    rdfs:domain smj:CollectiviteTerritoriale ;
+    rdfs:range rdfs:Literal .
+
+smj:domaineEtude a rdf:Property ;
+    rdfs:label "domaineEtude" ;
+    rdfs:domain smj:Observatoire ;
+    rdfs:range rdfs:Literal .
