@@ -1,0 +1,222 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix o: <http://omeka.org/s/vocabs/o#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix lakram: <https://github.com/lakramproject/onto/lakram#> .
+
+<https://github.com/lakramproject/onto/lakram#> a owl:Ontology ;
+    dcterms:title "Vocabulaire Accès Soins Jeunes (93)" ;
+    dcterms:description "Vocabulaire pour la gestion du parcours de soins psychologiques des jeunes." .
+
+
+lakram:Youth a rdfs:Class ;
+    rdfs:label "Jeune / Patient" ;
+    rdfs:comment "Représente le jeune bénéficiaire des soins (Youth)." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+lakram:SchoolInstitution a rdfs:Class ;
+    rdfs:label "Établissement Scolaire" ;
+    rdfs:comment "Lieu de scolarisation et de détection (SchoolInstitution)." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+lakram:HealthProfessional a rdfs:Class ;
+    rdfs:label "Professionnel de Santé" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+lakram:Psychologist a rdfs:Class ;
+    rdfs:label "Psychologue" ;
+    rdfs:subClassOf lakram:HealthProfessional ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+lakram:Psychiatrist a rdfs:Class ;
+    rdfs:label "Psychiatre" ;
+    rdfs:subClassOf lakram:HealthProfessional ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+lakram:MedicoSocialStructure a rdfs:Class ;
+    rdfs:label "Structure Médico-Sociale" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+lakram:CMP a rdfs:Class ;
+    rdfs:label "CMP (Centre Médico-Psychologique)" ;
+    rdfs:subClassOf lakram:MedicoSocialStructure ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+lakram:MDA a rdfs:Class ;
+    rdfs:label "MDA (Maison des Adolescents)" ;
+    rdfs:subClassOf lakram:MedicoSocialStructure ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+lakram:Hospital a rdfs:Class ;
+    rdfs:label "Hôpital" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+lakram:PsychologicalProgram a rdfs:Class ;
+    rdfs:label "Programme Psychologique" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+lakram:ARS_IDF a rdfs:Class ;
+    rdfs:label "ARS Île-de-France" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+lakram:LocalAuthority a rdfs:Class ;
+    rdfs:label "Collectivité Locale" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+lakram:LocalAssociation a rdfs:Class ;
+    rdfs:label "Association Locale" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+
+lakram:FollowUpFile a rdfs:Class ;
+    rdfs:label "Dossier de Suivi" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+lakram:Consultation a rdfs:Class ;
+    rdfs:label "Consultation" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+lakram:Referral a rdfs:Class ;
+    rdfs:label "Orientation (Referral)" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+
+# --- Propriétés liées au Jeune (Youth) ---
+lakram:firstName a rdf:Property ;
+    rdfs:label "Prénom" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+lakram:lastName a rdf:Property ;
+    rdfs:label "Nom de famille" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+lakram:age a rdf:Property ;
+    rdfs:label "Âge" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+lakram:city a rdf:Property ;
+    rdfs:label "Ville" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+lakram:schoolStatus a rdf:Property ;
+    rdfs:label "Statut Scolaire" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+lakram:gdprConsent a rdf:Property ;
+    rdfs:label "Consentement RGPD" ;
+    rdfs:comment "Booléen indiquant l'accord du jeune/famille" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+lakram:satisfactionScore a rdf:Property ;
+    rdfs:label "Score de satisfaction" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+# --- Propriétés liées aux Professionnels & Structures ---
+lakram:specialty a rdf:Property ;
+    rdfs:label "Spécialité" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+lakram:rpps a rdf:Property ;
+    rdfs:label "Numéro RPPS" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+lakram:availability a rdf:Property ;
+    rdfs:label "Disponibilité" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+lakram:capacity a rdf:Property ;
+    rdfs:label "Capacité d'accueil" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+lakram:structureType a rdf:Property ;
+    rdfs:label "Type de structure" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+lakram:department a rdf:Property ;
+    rdfs:label "Département (Hôpital)" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+lakram:budget a rdf:Property ;
+    rdfs:label "Budget alloué" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+# --- Propriétés liées au Suivi (Consultation, Dossier, Orientation) ---
+lakram:date a rdf:Property ;
+    rdfs:label "Date" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+lakram:status a rdf:Property ;
+    rdfs:label "Statut" ;
+    rdfs:comment "Statut du dossier ou de l'orientation" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+lakram:reportText a rdf:Property ;
+    rdfs:label "Compte-rendu" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+lakram:hasGoal a rdf:Property ;
+    rdfs:label "A comme objectif" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+# --- Relations entre les classes (Object Properties) ---
+lakram:hasConsultation a rdf:Property ;
+    rdfs:label "A effectué une consultation" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+lakram:hasFollowUpFile a rdf:Property ;
+    rdfs:label "Possède un dossier de suivi" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+lakram:refersTo a rdf:Property ;
+    rdfs:label "Oriente vers" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+lakram:isFundedBy a rdf:Property ;
+    rdfs:label "Est financé par" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+lakram:assignedProfessional a rdf:Property ;
+    rdfs:label "Professionnel assigné" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
