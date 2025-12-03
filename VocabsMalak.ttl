@@ -112,3 +112,38 @@ smj:domaineEtude a rdf:Property ;
     rdfs:label "domaineEtude" ;
     rdfs:domain smj:Observatoire ;
     rdfs:range rdfs:Literal .
+
+
+
+
+
+smj:estAccompagnePar a rdf:Property ;
+    rdfs:label "est accompagné par" ;
+    rdfs:domain smj:Jeune ;
+    rdfs:range smj:Association .
+
+smj:estSuiviPar a rdf:Property ;
+    rdfs:label "est suivi par" ;
+    rdfs:domain smj:Jeune ;
+    rdfs:range smj:InstitutionSanitaire .
+
+smj:estScolariseDans a rdf:Property ;
+    rdfs:label "est scolarisé dans" ;
+    rdfs:domain smj:Jeune ;
+    rdfs:range smj:InstitutionEducative .
+
+smj:appartientA a rdf:Property ;
+    rdfs:label "appartient à" ;
+    rdfs:domain smj:Jeune ;
+    rdfs:range smj:Famille .
+
+smj:finance a rdf:Property ;
+    rdfs:label "finance" ;
+    rdfs:domain smj:CollectiviteTerritoriale ;
+    rdfs:range smj:Association .
+
+smj:observe a rdf:Property ;
+    rdfs:label "observe" ;
+    rdfs:domain smj:Observatoire ;
+    rdfs:range smj:Jeune .
+
