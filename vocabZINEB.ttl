@@ -1,0 +1,138 @@
+@prefix z93: <http://example.org/zineb93#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix schema: <https://schema.org/> .
+
+
+<http://example.org/zineb93> a owl:Ontology ;
+    dcterms:title "Ontologie – Accès aux soins psychologiques des jeunes du 93 (Version Zineb Doukkali)" ;
+    dcterms:creator "Zineb Doukkali" ;
+    dcterms:description "Vocabulaire RDF personnalisé pour décrire le parcours d’accès aux soins psychologiques des jeunes en Seine-Saint-Denis. Version individuelle de Zineb Doukkali." ;
+    dcterms:created "2024-12-03" ;
+    dcterms:license "CC-BY 4.0" .
+
+
+##########################################
+
+z93:Jeune a owl:Class ;
+    rdfs:label "Jeune" ;
+    rdfs:comment "Jeune du département 93 ayant potentiellement besoin d’un soutien psychologique." ;
+    rdfs:subClassOf schema:Person .
+
+z93:EtablissementScolaire a owl:Class ;
+    rdfs:label "Établissement scolaire" ;
+    rdfs:comment "Établissement éducatif capable de repérer, informer ou orienter des jeunes." .
+
+z93:ProfessionnelSante a owl:Class ;
+    rdfs:label "Professionnel de santé" ;
+    rdfs:comment "Professionnel intervenant dans la santé mentale et le suivi psychologique." ;
+    rdfs:subClassOf schema:Person .
+
+z93:Psychologue a owl:Class ;
+    rdfs:label "Psychologue" ;
+    rdfs:subClassOf z93:ProfessionnelSante .
+
+z93:Psychiatre a owl:Class ;
+    rdfs:label "Psychiatre" ;
+    rdfs:subClassOf z93:ProfessionnelSante .
+
+z93:StructureMedicoSociale a owl:Class ;
+    rdfs:label "Structure médico-sociale" ;
+    rdfs:comment "CMP, MDA ou autre structure recevant et accompagnant les jeunes." .
+
+z93:CMP a owl:Class ;
+    rdfs:label "CMP" ;
+    rdfs:subClassOf z93:StructureMedicoSociale .
+
+z93:MDA a owl:Class ;
+    rdfs:label "Maison des Adolescents" ;
+    rdfs:subClassOf z93:StructureMedicoSociale .
+
+z93:Hopital a owl:Class ;
+    rdfs:label "Hôpital" ;
+    rdfs:comment "Structure hospitalière psychiatrique prenant en charge les cas graves." .
+
+z93:DispositifPsy a owl:Class ;
+    rdfs:label "Dispositif psychologique" ;
+    rdfs:comment "Dispositifs comme Santé Psy Étudiant ou Pass Santé Jeune." .
+
+z93:ARS_IDF a owl:Class ;
+    rdfs:label "ARS Île-de-France" ;
+    rdfs:comment "Institution coordonnant et finançant l’offre de soins en Île-de-France." .
+
+z93:CollectiviteLocale a owl:Class ;
+    rdfs:label "Collectivité locale" ;
+    rdfs:comment "Commune ou département soutenant la prévention et les associations." .
+
+z93:AssociationLocale a owl:Class ;
+    rdfs:label "Association locale" ;
+    rdfs:comment "Association locale travaillant dans la prévention, l’accompagnement ou l’orientation." .
+
+z93:DossierSuivi a owl:Class ;
+    rdfs:label "Dossier de suivi" ;
+    rdfs:comment "Dossier psychologique ouvert par une structure médico-sociale." .
+
+z93:Consultation a owl:Class ;
+    rdfs:label "Consultation psychologique" ;
+    rdfs:comment "Séance psychologique menée par un professionnel." .
+
+z93:Orientation a owl:Class ;
+    rdfs:label "Orientation psychologique" ;
+    rdfs:comment "Processus d’orientation d’un jeune vers une structure adaptée." .
+
+
+##########################################
+
+### Liens entre acteurs ###
+z93:consulte a owl:ObjectProperty ;
+    rdfs:label "consulte" ;
+    rdfs:domain z93:Jeune ;
+    rdfs:range z93:Consultation ;
+    rdfs:comment "Le jeune participe à une consultation psychologique." .
+
+z93:realiseePar a owl:ObjectProperty ;
+    rdfs:label "réalisée par" ;
+    rdfs:domain z93:Consultation ;
+    rdfs:range z93:ProfessionnelSante ;
+    rdfs:comment "La consultation est effectuée par un professionnel de santé." .
+
+z93:oriente a owl:ObjectProperty ;
+    rdfs:label "oriente" ;
+    rdfs:domain z93:EtablissementScolaire ;
+    rdfs:range z93:StructureMedicoSociale ;
+    rdfs:comment "L’établissement oriente un jeune vers une structure spécialisée." .
+
+z93:finance a owl:ObjectProperty ;
+    rdfs:label "finance" ;
+    rdfs:domain z93:ARS_IDF ;
+    rdfs:range z93:StructureMedicoSociale ;
+    rdfs:comment "L'ARS finance une structure médico-sociale." .
+
+z93:subventionne a owl:ObjectProperty ;
+    rdfs:label "subventionne" ;
+    rdfs:domain z93:CollectiviteLocale ;
+    rdfs:range z93:AssociationLocale ;
+    rdfs:comment "La collectivité finance une association locale." .
+
+### Propriétés des classes ###
+z93:age a owl:DatatypeProperty ;
+    rdfs:label "âge" ;
+    rdfs:domain z93:Jeune ;
+    rdfs:range schema:Number .
+
+z93:commune a owl:DatatypeProperty ;
+    rdfs:label "commune" ;
+    rdfs:domain z93:Jeune ;
+    rdfs:range schema:Text .
+
+z93:situationScolaire a owl:DatatypeProperty ;
+    rdfs:label "situation scolaire" ;
+    rdfs:domain z93:Jeune ;
+    rdfs:range schema:Text .
+
+z93:dateConsultation a owl:DatatypeProperty ;
+    rdfs:label "date de consultation" ;
+    rdfs:domain z93:Consultation ;
+    rdfs:range schema:Date .
