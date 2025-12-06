@@ -1,0 +1,230 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix o: <http://omeka.org/s/vocabs/o#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix asp: <https://acces-soins-psychologiques93.fr/vocab#> .
+
+<https://acces-soins-psychologiques93.fr/vocab#> a owl:Ontology ;
+    dcterms:title "Vocabulaire Accès Soins Jeunes (93)" ;
+    dcterms:description "Vocabulaire commun pour la gestion du parcours de soins psychologiques des jeunes en Seine-Saint-Denis." .
+
+
+### --- CLASSES ---
+
+asp:Youth a rdfs:Class ;
+    rdfs:label "Jeune / Patient" ;
+    rdfs:comment "Représente le jeune bénéficiaire des soins." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+asp:SchoolInstitution a rdfs:Class ;
+    rdfs:label "Établissement Scolaire" ;
+    rdfs:comment "Lieu de scolarisation et de détection." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+asp:HealthProfessional a rdfs:Class ;
+    rdfs:label "Professionnel de Santé" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+asp:Psychologist a rdfs:Class ;
+    rdfs:label "Psychologue" ;
+    rdfs:subClassOf asp:HealthProfessional ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+asp:Psychiatrist a rdfs:Class ;
+    rdfs:label "Psychiatre" ;
+    rdfs:subClassOf asp:HealthProfessional ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+asp:MedicoSocialStructure a rdfs:Class ;
+    rdfs:label "Structure Médico-Sociale" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+asp:CMP a rdfs:Class ;
+    rdfs:label "CMP (Centre Médico-Psychologique)" ;
+    rdfs:subClassOf asp:MedicoSocialStructure ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+asp:MDA a rdfs:Class ;
+    rdfs:label "MDA (Maison des Adolescents)" ;
+    rdfs:subClassOf asp:MedicoSocialStructure ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+asp:Hospital a rdfs:Class ;
+    rdfs:label "Hôpital" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+asp:PsychologicalProgram a rdfs:Class ;
+    rdfs:label "Programme Psychologique" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+asp:ARS_IDF a rdfs:Class ;
+    rdfs:label "ARS Île-de-France" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+asp:LocalAuthority a rdfs:Class ;
+    rdfs:label "Collectivité Locale" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+asp:LocalAssociation a rdfs:Class ;
+    rdfs:label "Association Locale" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+
+asp:FollowUpFile a rdfs:Class ;
+    rdfs:label "Dossier de Suivi" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+asp:Consultation a rdfs:Class ;
+    rdfs:label "Consultation" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+asp:Referral a rdfs:Class ;
+    rdfs:label "Orientation" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+
+### --- PROPRIÉTÉS : JEUNE ---
+
+asp:firstName a rdf:Property ;
+    rdfs:label "Prénom" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+asp:lastName a rdf:Property ;
+    rdfs:label "Nom de famille" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+asp:age a rdf:Property ;
+    rdfs:label "Âge" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+asp:city a rdf:Property ;
+    rdfs:label "Ville" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+asp:schoolStatus a rdf:Property ;
+    rdfs:label "Statut Scolaire" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+asp:gdprConsent a rdf:Property ;
+    rdfs:label "Consentement RGPD" ;
+    rdfs:comment "Booléen indiquant l'accord du jeune/famille." ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+asp:satisfactionScore a rdf:Property ;
+    rdfs:label "Score de satisfaction" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+
+### --- PROPRIÉTÉS : PROFESSIONNELS ET STRUCTURES ---
+
+asp:specialty a rdf:Property ;
+    rdfs:label "Spécialité" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+asp:rpps a rdf:Property ;
+    rdfs:label "Numéro RPPS" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+asp:availability a rdf:Property ;
+    rdfs:label "Disponibilité" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+asp:capacity a rdf:Property ;
+    rdfs:label "Capacité d'accueil" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+asp:structureType a rdf:Property ;
+    rdfs:label "Type de structure" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+asp:department a rdf:Property ;
+    rdfs:label "Département (Hôpital)" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+asp:budget a rdf:Property ;
+    rdfs:label "Budget alloué" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+
+### --- PROPRIÉTÉS : SUIVI ---
+
+asp:date a rdf:Property ;
+    rdfs:label "Date" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+asp:status a rdf:Property ;
+    rdfs:label "Statut" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+asp:reportText a rdf:Property ;
+    rdfs:label "Compte-rendu" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+asp:hasGoal a rdf:Property ;
+    rdfs:label "A comme objectif" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+
+### --- RELATIONS ---
+
+asp:hasConsultation a rdf:Property ;
+    rdfs:label "A effectué une consultation" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+asp:hasFollowUpFile a rdf:Property ;
+    rdfs:label "Possède un dossier de suivi" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+asp:refersTo a rdf:Property ;
+    rdfs:label "Oriente vers" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+asp:isFundedBy a rdf:Property ;
+    rdfs:label "Est financé par" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+asp:assignedProfessional a rdf:Property ;
+    rdfs:label "Professionnel assigné" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
