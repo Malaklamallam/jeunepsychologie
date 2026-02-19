@@ -1,3 +1,6 @@
+# Annotations  
+(19/02/2026 23:17:22)
+
 « le développement technologique a considérablement transformé nos modes de vie et touché toutes les sphères de la société » ([Maurel, p. 43](zotero://select/library/items/F39TR2H2)) ([pdf](zotero://open-pdf/library/items/JPF9DL4L?page=43&annotation=IBXZMUHK)) La technologie est partout dans notre vie aujourd’hui
 
 « Il est aujourd’hui indéniable d’apprécier l’impact considérable qu’a le développement technologique sur la vie de l’homme et son environnement » ([Maurel, p. 43](zotero://select/library/items/F39TR2H2)) ([pdf](zotero://open-pdf/library/items/JPF9DL4L?page=43&annotation=JMC3ERXK)) La technologie a vraiment changé notre quotidien
